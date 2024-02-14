@@ -9,7 +9,7 @@ const App = () => {
       <Notification />
       <Header />
       <Outlet />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
