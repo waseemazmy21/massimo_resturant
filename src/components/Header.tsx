@@ -4,7 +4,7 @@ import Cart from './Cart';
 
 const Header = () => {
   return (
-    <header className="h-12 text-red-500 p-4 flex items-center justify-between border-b-2 border-b-red-500 uppercase md:h-16 lg:px-12">
+    <header className="h-12 text-red-500 p-4 flex items-center justify-between border-b-2 border-b-red-500 uppercase md:h-16 md:px-12">
       {/* Logo */}
       <div className="text-xl md:font-bold">
         <Link to="/">Massimo</Link>
