@@ -9,7 +9,7 @@ const Menu = () => {
           to={`/menu/${category.slug}`}
           key={category.id}
           className="p-8 flex-1 bg-cover"
-          style={{ backgroundImage: `url(${category.img})` }}
+          style={{ backgroundImage: `url(${category.imageURL})` }}
         >
           <div className={`text-${category.color} w-1/2`}>
             <h1 className="uppercase font-bold text-2xl">{category.title}</h1>
