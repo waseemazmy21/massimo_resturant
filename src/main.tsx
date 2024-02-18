@@ -7,6 +7,7 @@ import Menu from './pages/Menu.tsx';
 import Orders from './pages/Orders.tsx';
 import Cart from './pages/Cart.tsx';
 import Category from './pages/Category.tsx';
+import Product from './pages/Product.tsx';
 import './index.css';
 
 const router = createBrowserRouter([
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: 'menu/:category',
         element: <Category />,
+      },
+      {
+        path: 'products/:id',
+        element: <Product />,
       },
       {
         path: 'orders',

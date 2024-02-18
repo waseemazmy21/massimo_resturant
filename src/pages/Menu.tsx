@@ -3,17 +3,17 @@ import { Link } from 'react-router-dom';
 
 const Menu = () => {
   return (
-    <div className="p-8 md:px-12  md:h-[calc(100vh-7rem)] flex flex-col md:flex-row md:items-center">
-      {menu.map((category) => (
+    <div className="container md:h-[calc(100vh-7rem)] flex flex-col md:flex-row md:items-center">
+      {menu.map((item) => (
         <Link
-          to={`/menu/${category.slug}`}
-          key={category.id}
+          to={`/menu/${item.category}`}
+          key={item.id}
           className="p-8 flex-1 bg-cover"
-          style={{ backgroundImage: `url(${category.imageURL})` }}
+          style={{ backgroundImage: `url(${item.imageURL})` }}
         >
-          <div className={`text-${category.color} w-1/2`}>
-            <h1 className="uppercase font-bold text-2xl">{category.title}</h1>
-            <p className="text-sm ">{category.desc}</p>
+          <div className={`text-${item.color} w-1/2`}>
+            <h1 className="uppercase font-bold text-2xl">{item.title}</h1>
+            <p className="text-sm ">{item.desc}</p>
           </div>
         </Link>
       ))}
