@@ -59,7 +59,7 @@ export const menu: MenuItem[] = [
 ];
 
 type Product = {
-  id: number;
+  id: string;
   category: string;
   title: string;
   desc: string;
@@ -70,7 +70,7 @@ type Product = {
 
 export const products: Product[] = [
   {
-    id: 1,
+    id: '1',
     category: 'pizzas',
     title: 'Sicilian',
     desc: 'Ignite your taste buds with a fiery combination of spicy pepperoni, jalapeños, crushed red pepper flakes, and melted mozzarella cheese, delivering a kick with every bite.',
@@ -92,7 +92,7 @@ export const products: Product[] = [
     ],
   },
   {
-    id: 2,
+    id: '2',
     category: 'burgers',
     title: 'Bacon Deluxe',
     desc: 'Indulge in smoky goodness with a flame-grilled beef patty, topped with crispy bacon, melted cheddar cheese, caramelized onions, and a smattering of tangy BBQ sauce.',
@@ -114,7 +114,7 @@ export const products: Product[] = [
     ],
   },
   {
-    id: 3,
+    id: '3',
     category: 'pizzas',
     title: 'Bella Napoli',
     desc: 'A classic Italian delight featuring a thin, crispy crust, tangy tomato sauce, fresh mozzarella, and a medley of aromatic herbs topped with lettuce, tomatoes, and a dollop of tangy mayo.',
@@ -136,7 +136,7 @@ export const products: Product[] = [
     ],
   },
   {
-    id: 4,
+    id: '4',
     category: 'pastas',
     title: 'Spicy Arrabbiata',
     desc: 'Ignite your taste buds with this fiery pasta creation, combining penne in a spicy tomato sauce infused with garlic, red chili flakes, and fresh basil for the ultimate comfort food experience.',
@@ -158,7 +158,7 @@ export const products: Product[] = [
     ],
   },
   {
-    id: 5,
+    id: '5',
     category: 'burgers',
     title: 'Jalapeño Fiesta',
     desc: 'Ignite your taste buds with a fiery kick! This burger features a succulent beef patty, fiery jalapeños, pepper jack cheese, and a zesty chipotle mayo sauce , and all the classic fixings on a toasted bun.',
@@ -180,7 +180,7 @@ export const products: Product[] = [
     ],
   },
   {
-    id: 6,
+    id: '6',
     category: 'pizzas',
 
     title: 'Margherita Magic',
@@ -203,7 +203,7 @@ export const products: Product[] = [
     ],
   },
   {
-    id: 7,
+    id: '7',
     category: 'pastas',
 
     title: 'Garlic Parmesan Linguine',
@@ -226,7 +226,7 @@ export const products: Product[] = [
     ],
   },
   {
-    id: 8,
+    id: '8',
     category: 'pizzas',
     title: 'Mediterranean Delight',
     desc: 'Embark on a culinary journey with this Mediterranean-inspired creation, featuring zesty feta cheese, Kalamata olives, sun-dried tomatoes, and a sprinkle of oregano.',
@@ -248,7 +248,7 @@ export const products: Product[] = [
     ],
   },
   {
-    id: 9,
+    id: '9',
     category: 'burgers',
     title: 'Hawaiian Teriyaki',
     desc: 'Experience a taste of the tropics with a juicy beef patty glazed in tangy teriyaki sauce, topped with grilled pineapple, crispy bacon, and fresh lettuce, and all the classic fixings on a toasted bun.',
@@ -270,7 +270,7 @@ export const products: Product[] = [
     ],
   },
   {
-    id: 10,
+    id: '10',
     category: 'pizzas',
     title: 'Pesto Primavera',
     desc: 'A classic Italian delight featuring a thin, crispy crust, tangy tomato sauce, fresh mozzarella, and a medley of aromatic herbs topped with lettuce, tomatoes, and a dollop of tangy mayo.',
@@ -292,7 +292,7 @@ export const products: Product[] = [
     ],
   },
   {
-    id: 11,
+    id: '11',
     category: 'pizzas',
     title: 'Veggie Supreme',
     desc: 'A classic Italian delight featuring a thin, crispy crust, tangy tomato sauce, fresh mozzarella, and a medley of aromatic herbs topped with lettuce, tomatoes, and a dollop of tangy mayo.',
@@ -314,7 +314,7 @@ export const products: Product[] = [
     ],
   },
   {
-    id: 12,
+    id: '12',
     category: 'pizzas',
     title: 'Four Cheese Fantasy',
     desc: 'Experience pure cheesy bliss with a melty blend of mozzarella, cheddar, provolone, and Parmesan cheeses, creating a rich and indulgent pizza experience.',
@@ -336,3 +336,7 @@ export const products: Product[] = [
     ],
   },
 ];
+
+export const getProductById = (productId: string): Product | undefined => {
+  return products.find((product) => product.id === productId);
+};
