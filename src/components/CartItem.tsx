@@ -1,6 +1,7 @@
 import { numberFormatter } from '../util/number-formatter';
 import { ShoppingCartItem } from '../contexts/types';
 import { useShoppingCart } from '../contexts/useShoppingCart';
+import toast from 'react-hot-toast';
 
 type CartItemProps = {
   cartItem: ShoppingCartItem;
@@ -26,7 +27,15 @@ const CartItem = ({ cartItem, imageURL, title }: CartItemProps) => {
 
       <div className="flex gap-4">
         <span>{numberFormatter.format(cartItem.totalPrice)}</span>
-        <button className="text-3xl" onClick={() => removeItem(cartItem.id)}>
+        <button
+          className="text-3xl"
+          onClick={() => {
+            removeItem(cartItem.id);
+            toast.success(
+              `${cartItem.quantity} ${title}(s) removed from your cart!`
+            );
+          }}
+        >
           <img src="/close.png" className="w-4" alt="" />
         </button>
       </div>

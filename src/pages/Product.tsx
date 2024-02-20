@@ -4,6 +4,7 @@ import { numberFormatter } from '../util/number-formatter';
 import { useState } from 'react';
 import { useShoppingCart } from '../contexts/useShoppingCart';
 import { Link } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 const Product = () => {
   const [quantity, setQuantity] = useState<number>(1);
@@ -86,6 +87,9 @@ const Product = () => {
                 product.options[sizeOption].title,
                 quantity,
                 totalPrice
+              );
+              toast.success(
+                `${quantity} ${product.title}(s) added to your cart!`
               );
             }}
           >

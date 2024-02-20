@@ -7,7 +7,7 @@ const Header = () => {
     <header className="h-12 text-red-500 border-b-2 border-b-red-500 uppercase md:h-16">
       <div className="container flex items-center justify-between">
         {/* Logo */}
-        <div className="text-xl md:font-bold">
+        <div className="font-bold">
           <Link to="/">Massimo</Link>
         </div>
         <MobileMenu />

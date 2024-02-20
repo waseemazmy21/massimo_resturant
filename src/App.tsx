@@ -3,6 +3,7 @@ import Header from './components/Header';
 // import Footer from './components/Footer';
 import { Outlet } from 'react-router-dom';
 import ShoppingCartProvider from './contexts/shoppingCartContext';
+import { Toaster } from 'react-hot-toast';
 
 const App = () => {
   return (
@@ -11,7 +12,7 @@ const App = () => {
         <Notification />
         <Header />
         <Outlet />
-        <Toaster />
+        <Toaster position="top-right" />
       </div>
       {/* <Footer /> */}
     </ShoppingCartProvider>
