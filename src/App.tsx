@@ -11,6 +11,7 @@ const App = () => {
         <Notification />
         <Header />
         <Outlet />
+        <Toaster />
       </div>
       {/* <Footer /> */}
     </ShoppingCartProvider>

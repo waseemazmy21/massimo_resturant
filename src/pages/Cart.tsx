@@ -1,11 +1,11 @@
 import { useShoppingCart } from '../contexts/useShoppingCart';
 import { getProductById } from '../lib/data';
-// import { numberFormatter } from '../util/number-formatter';
+import { numberFormatter } from '../util/number-formatter';
 import CartItem from '../components/CartItem';
 import { Link } from 'react-router-dom';
 
 const Cart = () => {
-  const { cartItems } = useShoppingCart();
+  const { cartItems, getNumberOfItems, getTotal, checkout } = useShoppingCart();
 
   if (cartItems.length === 0) {
     return (
@@ -39,12 +39,12 @@ const Cart = () => {
       {/* PAYMENT CONTAINER */}
       <div className="p-4 bg-fuchsia-50 flex flex-col gap-4 md:w-[35%]">
         <div className="flex justify-between">
-          <span className="">Subtotal (3 items)</span>
-          <span className="">$81.70</span>
+          <span className="">Subtotal ({getNumberOfItems()} items)</span>
+          <span className="">{numberFormatter.format(getTotal())}</span>
         </div>
         <div className="flex justify-between">
           <span className="">Service Cost</span>
-          <span className="">$0.00</span>
+          <span className="">{numberFormatter.format(0)}</span>
         </div>
         <div className="flex justify-between">
           <span className="">Delivery Cost</span>
@@ -53,9 +53,14 @@ const Cart = () => {
         <hr className="my-2" />
         <div className="flex justify-between">
           <span className="">TOTAL(INCL. VAT)</span>
-          <span className="font-bold">$81.70</span>
+          <span className="font-bold">
+            {numberFormatter.format(getTotal())}
+          </span>
         </div>
-        <button className="bg-red-500 text-white p-3 rounded-md self-end">
+        <button
+          className="bg-red-500 text-white p-3 rounded-md self-end"
+          onClick={checkout}
+        >
           CHECKOUT
         </button>
       </div>

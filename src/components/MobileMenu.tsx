@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Cart from './Cart';
+import Cart from './CartIcon';
 
 const links = [
   { id: 1, title: 'Homepage', url: '/' },
@@ -36,12 +36,13 @@ const MobileMenu = () => {
               {link.title}
             </Link>
           ))}
-          <div
+          <Link
+            to="/cart"
             onClick={closeMenu}
             className="flex justify-center p-4 hover:bg-red-600"
           >
             <Cart />
-          </div>
+          </Link>
         </div>
       )}
     </div>

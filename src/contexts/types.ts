@@ -16,4 +16,7 @@ export type ShoppingCartContextType = {
     totalPrice: number
   ) => void;
   removeItem: (id: string) => void;
+  getNumberOfItems: () => number;
+  getTotal: () => number;
+  checkout: () => void;
 };

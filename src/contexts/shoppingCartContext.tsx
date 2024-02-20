@@ -35,8 +35,33 @@ const ShoppingCartProvider = ({ children }: ShoppingCartProviderProps) => {
     );
   }
 
+  function getNumberOfItems() {
+    return cartItems.reduce((n, cartItem) => n + cartItem.quantity, 0);
+  }
+  function getTotal() {
+    return cartItems.reduce(
+      (total, cartItem) => total + cartItem.totalPrice,
+      0
+    );
+  }
+
+  function checkout() {
+    // Perform l checkout logic
+
+    setCartItems([]);
+  }
+
   return (
-    <shoppingCartContext.Provider value={{ cartItems, addItem, removeItem }}>
+    <shoppingCartContext.Provider
+      value={{
+        cartItems,
+        addItem,
+        removeItem,
+        getNumberOfItems,
+        getTotal,
+        checkout,
+      }}
+    >
       {children}
     </shoppingCartContext.Provider>
   );

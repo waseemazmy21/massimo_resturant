@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import MobileMenu from './MobileMenu';
-import Cart from './Cart';
+import CartIcon from './CartIcon';
 
 const Header = () => {
   return (
@@ -15,7 +15,9 @@ const Header = () => {
         <div className="hidden md:flex gap-4 items-center justify-end">
           <Link to="/menu">Menu</Link>
           <Link to="/orders">Orders</Link>
-          <Cart />
+          <Link to="/cart">
+            <CartIcon />
+          </Link>
         </div>
       </div>
     </header>
