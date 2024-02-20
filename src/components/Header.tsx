@@ -14,7 +14,7 @@ const Header = () => {
         {/* Right Links */}
         <div className="hidden md:flex gap-4 items-center justify-end">
           <Link to="/menu">Menu</Link>
-          <Link to="/orders">Orders</Link>
+          {/* <Link to="/orders">Orders</Link> */}
           <Link to="/cart">
             <CartIcon />
           </Link>

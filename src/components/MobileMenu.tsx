@@ -5,7 +5,7 @@ import Cart from './CartIcon';
 const links = [
   { id: 1, title: 'Homepage', url: '/' },
   { id: 2, title: 'Menu', url: '/menu' },
-  { id: 3, title: 'Orders', url: '/orders' },
+  // { id: 3, title: 'Orders', url: '/orders' },
 ] as const;
 
 const MobileMenu = () => {

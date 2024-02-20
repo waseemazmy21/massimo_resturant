@@ -12,7 +12,7 @@ const App = () => {
         <Notification />
         <Header />
         <Outlet />
-        <Toaster position="top-right" />
+        <Toaster position="bottom-left" />
       </div>
       {/* <Footer /> */}
     </ShoppingCartProvider>

@@ -3,6 +3,7 @@ import { getProductById } from '../lib/data';
 import { numberFormatter } from '../util/number-formatter';
 import CartItem from '../components/CartItem';
 import { Link } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 const Cart = () => {
   const { cartItems, getNumberOfItems, getTotal, checkout } = useShoppingCart();
@@ -29,6 +30,7 @@ const Cart = () => {
 
           return (
             <CartItem
+              key={cartItem.id}
               cartItem={cartItem}
               imageURL={product.imageURL}
               title={product.title}
@@ -59,7 +61,12 @@ const Cart = () => {
         </div>
         <button
           className="bg-red-500 text-white p-3 rounded-md self-end"
-          onClick={checkout}
+          onClick={() => {
+            if (confirm('confirm you order.')) {
+              checkout();
+              toast.success('thank you!');
+            }
+          }}
         >
           CHECKOUT
         </button>

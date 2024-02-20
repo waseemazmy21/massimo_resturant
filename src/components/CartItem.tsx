@@ -12,10 +12,7 @@ type CartItemProps = {
 const CartItem = ({ cartItem, imageURL, title }: CartItemProps) => {
   const { removeItem } = useShoppingCart();
   return (
-    <li
-      key={cartItem.id}
-      className="p-4 flex justify-between items-center gap-4"
-    >
+    <li className="p-4 flex justify-between items-center gap-4">
       <div className="flex gap-4 items-center">
         <img src={imageURL} alt="" className="w-14 h-14 object-cover" />
         <div>
