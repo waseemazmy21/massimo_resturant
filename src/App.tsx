@@ -7,7 +7,7 @@ import ShoppingCartProvider from './contexts/shoppingCartContext';
 const App = () => {
   return (
     <ShoppingCartProvider>
-      <div className="flex flex-col">
+      <div className="min-h-screen flex flex-col">
         <Notification />
         <Header />
         <Outlet />
