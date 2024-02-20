@@ -17,16 +17,27 @@ const ShoppingCartProvider = ({ children }: ShoppingCartProviderProps) => {
     quantity: number,
     totalPrice: number
   ) {
-    setCartItems((prevCartItems) => [
-      ...prevCartItems,
-      {
-        id: uuidv4(),
-        productId,
-        size,
-        quantity,
-        totalPrice,
-      },
-    ]);
+    const existingItemIndex = cartItems.findIndex(
+      (cartItem) => cartItem.productId === productId && cartItem.size === size
+    );
+
+    if (existingItemIndex !== -1) {
+      const updatedCartItems = [...cartItems];
+      updatedCartItems[existingItemIndex].quantity += quantity;
+      updatedCartItems[existingItemIndex].totalPrice += totalPrice;
+      return updatedCartItems;
+    } else {
+      setCartItems((prevCartItems) => [
+        ...prevCartItems,
+        {
+          id: uuidv4(),
+          productId,
+          quantity,
+          size,
+          totalPrice,
+        },
+      ]);
+    }
   }
 
   function removeItem(id: string) {

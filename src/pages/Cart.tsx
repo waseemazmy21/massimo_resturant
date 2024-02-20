@@ -10,7 +10,7 @@ const Cart = () => {
   if (cartItems.length === 0) {
     return (
       <div className="container flex-1 flex flex-col justify-center items-center">
-        <p className="text-3xl text-slate-600 mb-4">Your cart is empty,</p>
+        <p className="text-3xl text-slate-600 mb-4">Your cart is empty!</p>
         <Link to="/menu" className="text-red-600 hover:underline">
           Check out the Menu
         </Link>
