@@ -66,7 +66,7 @@ const Product = () => {
 
         {/* quantity */}
         <div className="flex justify-between items-center">
-          <div className="flex justify-between w-full p-3 ring-1 ring-red-500">
+          <div className="flex justify-between grow gap-2 p-3 ring-1 ring-red-500">
             <span>Quantity</span>
             <div className="flex gap-4 items-center">
               <button
@@ -80,7 +80,7 @@ const Product = () => {
             </div>
           </div>
           <button
-            className="uppercase w-56 bg-red-500 text-white p-3 ring-1 ring-red-500"
+            className="uppercase bg-red-500 text-white p-3 ring-1 ring-red-500"
             onClick={() => {
               addItem(
                 product.id,

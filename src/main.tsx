@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 import App from './App.tsx';
 import Home from './pages/Home.tsx';
 import Menu from './pages/Menu.tsx';
@@ -10,10 +10,11 @@ import Category from './pages/Category.tsx';
 import Product from './pages/Product.tsx';
 import './index.css';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: <App />,
+
     children: [
       {
         index: true,

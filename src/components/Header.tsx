@@ -5,9 +5,9 @@ import CartIcon from './CartIcon';
 const Header = () => {
   return (
     <header className="h-12 text-red-500 border-b-2 border-b-red-500 uppercase md:h-16">
-      <div className="container flex items-center justify-between">
+      <div className="container !py-0 h-full flex items-center justify-between">
         {/* Logo */}
-        <div className="font-bold">
+        <div className="font-extrabold">
           <Link to="/">Massimo</Link>
         </div>
         <MobileMenu />

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { slides } from '../lib/data';
+import { Link } from 'react-router-dom';
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -20,9 +21,12 @@ const Slider = () => {
         <h1 className="text-2xl text-center uppercase">
           {slides[currentSlide].title}
         </h1>
-        <button className="bg-red-500 hover:bg-red-500/85 rounded-2xl text-white py-4 px-8">
+        <Link
+          to="/cart"
+          className="bg-red-500 hover:bg-red-500/85 rounded-2xl text-white py-4 px-8"
+        >
           Order Now
-        </button>
+        </Link>
       </div>
       <div className="flex-[1_0_0%] overflow-hidden">
         <img

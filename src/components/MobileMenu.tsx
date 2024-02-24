@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Cart from './CartIcon';
+import menu from '/open.png';
+import close from '/close.png';
 
 const links = [
   { id: 1, title: 'Homepage', url: '/' },
@@ -18,7 +20,7 @@ const MobileMenu = () => {
     <div className="md:hidden">
       <button onClick={() => setOpen(!open)}>
         <img
-          src={open ? 'close.png' : '/open.png'}
+          src={open ? close : menu}
           alt=""
           className="w-5 h-5 object-cover"
         />
