@@ -1,30 +1,52 @@
-# React + TypeScript + Vite
+# Restaurant Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive restaurant web application with an intuitive user interface, offering a seamless menu browsing and shopping cart experience.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Responsive Design**: Optimized for all devices using TailwindCSS.
+- **User-Friendly Interface**: Simple and intuitive navigation for an enhanced user experience.
+- **Shopping Cart**: Built-in shopping cart feature for adding, updating, and removing items.
 
-## Expanding the ESLint configuration
+## Technologies
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React**: Front-end JavaScript library for building user interfaces.
+- **TypeScript**: Strongly-typed JavaScript for maintaining code quality.
+- **TailwindCSS**: Utility-first CSS framework for fast UI development.
+- **Vite**: Build tool for faster and leaner development.
 
-- Configure the top-level `parserOptions` property like this:
+## Installation
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+1. Clone the repository:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+    ```bash
+    git clone https://github.com/waseemazmy21/massimo_resturant/
+    ```
+
+2. Navigate to the project directory:
+
+    ```bash
+    cd massimo_resturant
+    ```
+
+3. Install dependencies:
+
+    ```bash
+    npm install
+    ```
+
+4. Run the development server:
+
+    ```bash
+    npm run dev
+    ```
+
+5. Open your browser and navigate to:
+
+    ```
+    http://localhost:3000
+    ```
+
+## Live Demo
+
+Check out the live version [here](https://waseemazmy21.github.io/massimo_resturant/).
